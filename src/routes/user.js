@@ -4,11 +4,11 @@ const { login, register, processRegister, processLogin } = require("../controlle
 const uploadAvatar = require("../middlewares/uploadAvatar");
 const registerValidator = require("../validations/registerValidator");
 const loginValidator = require("../validations/loginValidator");
+
 /* GET - Login Form */
 router.get("/login", login); 
 /* POST - Login user */
-
-router.post("/login", loginValidator, processLogin)
+router.post("/login", loginValidator, processLogin);
 
 /* GET - Register form */
 router.get("/register", register); 

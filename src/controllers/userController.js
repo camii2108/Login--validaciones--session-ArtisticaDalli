@@ -1,8 +1,9 @@
 const { users, writeUsersJson } = require("../database");
 const { validationResult } = require("express-validator");
+const session = require("express-session");
 module.exports = {
     login: (req, res) => {
-        res.render("login")
+        res.render("login", { session: req.session })
     },
     /* recibe los datos del login */
     processLogin: (req, res) => {
@@ -23,7 +24,7 @@ module.exports = {
             /* lo que hago es que se me guarden los datos de locals y session, loacls nos permite acceder desde la vista  */
             res.locals.user = req.session.user;
 
-            res.redirect("/")
+            res.redirect("/");
 
 
         }else{
@@ -73,7 +74,8 @@ module.exports = {
         } else {
             res.render("register", {
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                session: req.session
             })
         }
       
