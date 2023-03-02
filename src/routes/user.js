@@ -6,7 +6,7 @@ const registerValidator = require("../validations/registerValidator");
 const loginValidator = require("../validations/loginValidator");
 /* GET - Login Form */
 router.get("/login", login); 
-/* POST - Loginuser */
+/* POST - Login user */
 
 router.post("/login", loginValidator, processLogin)
 

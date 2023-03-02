@@ -2,13 +2,14 @@
 <html lang="en">
 <%- include('partials/head')%>
 <body>
+    <h1>OBJETIVO DE HOY HACER QUE EL: "Usuario se logue, hacer validacion y que cincida las contraseñas y logre entrar"</h1>
 <%- include('partials/header')%>
 <div class="userMancha">
     <img src="/images/manchas/pngwing.com (7).png" alt="">
 </div>
     <main class="usersForm-container">
        
-        <h3 class="userTitle">Registrate</h3>
+        <h3 class="userTitle">Registrate </h3>
         <form action="/users/register" method="POST" enctype="multipart/form-data" class="form-ad" >
             <div class="form-ad-input">
                 <input type="text" name="name" placeholder="Nombre" value="<%= locals.old && old.name %>">

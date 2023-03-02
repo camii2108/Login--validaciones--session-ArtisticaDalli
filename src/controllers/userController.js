@@ -5,7 +5,7 @@ module.exports = {
         res.render("login")
     },
     /* recibe los datos del login */
-    processLogin: (req,res) => {
+    processLogin: (req, res) => {
         let errors = validationResult(req) ;
 /* si errores esta vacion usuario logueado */
         if (errors.isEmpty()) {
